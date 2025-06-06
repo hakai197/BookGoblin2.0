@@ -15,6 +15,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!--suppress UnresolvedMavenProperty -->
         <java.version>${env.CURRICULUM_JAVA_VERSION}</java.version>
         <jjwt.version>0.11.1</jjwt.version>
     </properties>

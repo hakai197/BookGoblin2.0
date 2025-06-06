@@ -1,8 +1,9 @@
 package com.book_goblin2.security;
 
 
-import com.manifest_processor2.dao.UserDao;
-import com.manifest_processor2.model.User;
+
+import com.book_goblin2.dao.UserDao;
+import com.book_goblin2.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.GrantedAuthority;

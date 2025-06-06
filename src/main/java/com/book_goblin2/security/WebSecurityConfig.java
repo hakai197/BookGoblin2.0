@@ -1,8 +1,9 @@
 package com.book_goblin2.security;
 
 
-import com.manifest_processor2.security.jwt.JwtCustomDsl;
-import com.manifest_processor2.security.jwt.TokenProvider;
+
+import com.book_goblin2.security.jwt.JwtCustomDsl;
+import com.book_goblin2.security.jwt.TokenProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
