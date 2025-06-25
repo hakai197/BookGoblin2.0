@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Goblin - Your Personal Library Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="img\bookgoblin 3.0.jpg" alt="Book Goblin Logo">
+                    Book Goblin
+                </a>
+                <div class="nav-links">
+                    <a href="#" class="active">Dashboard</a>
+                    <a href="#">My Library</a>
+                    <a href="#">Reading Log</a>
+                    <a href="#">Discover</a>
+                    <a href="#">Account</a>
+                </div>
+                <button class="theme-toggle" id="themeToggle">
+                    <span id="themeIcon">🌙</span> <span id="themeText">Dark Mode</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Dashboard View -->
+            <section id="dashboard">
+                <div class="page-header">
+                    <h1 class="page-title">Dashboard</h1>
+                    <button>Add Book</button>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">127</div>
+                        <div class="stat-label">Total Books</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Currently Reading</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">83</div>
+                        <div class="stat-label">Books Read</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">20</div>
+                        <div class="stat-label">Did Not Finish</div>
+                    </div>
+                </div>
+
+                <h2>Currently Reading</h2>
+                <div class="book-grid">
+                    <!-- Book Card 1 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://via.placeholder.com/200x300" alt="Book Cover">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-title">The Name of the Wind</div>
+                            <div class="book-author">Patrick Rothfuss</div>
+                            <div class="book-status status-reading">Reading</div>
+                        </div>
+                    </div>
+                    <!-- Book Card 2 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://via.placeholder.com/200x300" alt="Book Cover">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-title">Dune</div>
+                            <div class="book-author">Frank Herbert</div>
+                            <div class="book-status status-reading">Reading</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Book Detail View (hidden by default) -->
+            <section id="book-detail" style="display: none;">
+                <div class="page-header">
+                    <h1 class="page-title">Book Details</h1>
+                    <div>
+                        <button class="btn">Edit</button>
+                        <button class="btn">Delete</button>
+                    </div>
+                </div>
+
+                <div class="book-detail">
+                    <div class="book-detail-cover">
+                        <img src="https://via.placeholder.com/300x400" alt="Book Cover">
+                    </div>
+                    <div class="book-detail-info">
+                        <h1 class="book-detail-title">The Name of the Wind</h1>
+                        <h2 class="book-detail-author">Patrick Rothfuss</h2>
+                        
+                        <div class="book-meta">
+                            <div class="book-meta-item">
+                                <span>📅</span>
+                                <span>2007</span>
+                            </div>
+                            <div class="book-meta-item">
+                                <span>🔖</span>
+                                <span>978-0756404741</span>
+                            </div>
+                        </div>
+
+                        <div class="book-tags">
+                            <span class="tag">Fantasy</span>
+                            <span class="tag">Fiction</span>
+                            <span class="tag">Adventure</span>
+                        </div>
+
+                        <div class="book-actions">
+                            <select class="form-control" style="width: auto; display: inline-block;">
+                                <option>Change Status</option>
+                                <option>Unread</option>
+                                <option selected>Reading</option>
+                                <option>Finished</option>
+                                <option>Did Not Finish</option>
+                            </select>
+                            <button class="btn">Add to Reading Log</button>
+                        </div>
+
+                        <div class="reading-log">
+                            <h3>Reading Log</h3>
+                            <div class="log-entry">
+                                <div class="log-dates">
+                                    <span>📅 Started: Jan 15, 2023</span>
+                                    <span>→</span>
+                                    <span>📅 Finished: Feb 10, 2023</span>
+                                </div>
+                                <div class="log-rating">⭐️⭐️⭐️⭐️⭐️ (5)</div>
+                                <p class="log-notes">Absolutely loved this book! The world-building is incredible and the characters are so well-developed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Add Book Form (hidden by default) -->
+            <section id="add-book" style="display: none;">
+                <div class="page-header">
+                    <h1 class="page-title">Add New Book</h1>
+                </div>
+
+                <form style="max-width: 600px; margin: 0 auto;">
+                    <div class="form-group">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" id="title" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="author" class="form-label">Author</label>
+                        <input type="text" id="author" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="isbn" class="form-label">ISBN</label>
+                        <input type="text" id="isbn" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="year" class="form-label">Publication Year</label>
+                        <input type="number" id="year" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cover" class="form-label">Cover Image URL</label>
+                        <input type="url" id="cover" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="status" class="form-label">Status</label>
+                        <select id="status" class="form-control">
+                            <option value="unread">Unread</option>
+                            <option value="reading">Currently Reading</option>
+                            <option value="finished">Finished</option>
+                            <option value="dnf">Did Not Finish</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tags" class="form-label">Tags (comma separated)</label>
+                        <input type="text" id="tags" class="form-control" placeholder="Fantasy, Fiction, Signed">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn">Cancel</button>
+                        <button type="submit" class="btn">Add Book</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script src="theme.js"></script>
+</body>
+  <div class="sidebar-image">
+        <img src="img\Chilling Goblin.png" alt="Decorative book image">
+    </div>
+</html>
