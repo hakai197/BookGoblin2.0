@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Log - Book Goblin</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="logged-in">
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="dashboard.html" class="logo">
+                    <img src="../img/bookgoblin 3.0.jpg" alt="Book Goblin Logo">
+                    Book Goblin
+                </a>
+                <div class="nav-links">
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="library.html">My Library</a>
+                    <a href="reading-log.html" class="active">Reading Log</a>
+                    <a href="discover.html">Discover</a>
+                    <a href="account.html">Account</a>
+                </div>
+                <div class="user-menu">
+                    <div class="user-avatar">
+                        <img src="..\img\account image.png" alt="User Avatar">
+                    </div>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span id="themeIcon">🌙</span> <span id="themeText">Dark Mode</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section id="reading-log">
+                <div class="page-header">
+                    <h1 class="page-title">Reading Log</h1>
+                    <button class="btn" id="addLogEntry">Add Log Entry</button>
+                </div>
+
+                <div class="log-filters">
+                    <div class="filter-group">
+                        <label for="time-period" class="form-label">Time Period:</label>
+                        <select id="time-period" class="form-control">
+                            <option>All Time</option>
+                            <option>This Year</option>
+                            <option selected>This Month</option>
+                            <option>This Week</option>
+                            <option>Custom Range</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="log-sort" class="form-label">Sort By:</label>
+                        <select id="log-sort" class="form-control">
+                            <option>Most Recent</option>
+                            <option>Oldest First</option>
+                            <option>Highest Rated</option>
+                            <option>Lowest Rated</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="log-entries">
+                    <div class="log-entry">
+                        <div class="log-book">
+                            <img src="../img/Name_of_the_Wind_Cover.jpg" alt="Book Cover" class="log-book-cover">
+                            <div class="log-book-info">
+                                <h3>The Name of the Wind</h3>
+                                <p>Patrick Rothfuss</p>
+                            </div>
+                        </div>
+                        <div class="log-details">
+                            <div class="log-dates">
+                                <span>📅 Jan 15 - Feb 10, 2023</span>
+                                <span class="log-pages">📖 350 pages</span>
+                            </div>
+                            <div class="log-rating">⭐️⭐️⭐️⭐️⭐️ (5/5)</div>
+                            <div class="log-notes">
+                                <p>Absolutely loved this book! The world-building is incredible and the characters are so well-developed. Kvothe's journey is fascinating and the magic system is unique.</p>
+                            </div>
+                        </div>
+                        <div class="log-actions">
+                            <button class="btn-icon">✏️</button>
+                            <button class="btn-icon">🗑️</button>
+                        </div>
+                    </div>
+
+                    <div class="log-entry">
+                        <div class="log-book">
+                            <img src="../img/Dune Cover.jfif" alt="Book Cover" class="log-book-cover">
+                            <div class="log-book-info">
+                                <h3>Dune</h3>
+                                <p>Frank Herbert</p>
+                            </div>
+                        </div>
+                        <div class="log-details">
+                            <div class="log-dates">
+                                <span>📅 Mar 5 - Mar 28, 2023</span>
+                                <span class="log-pages">📖 412 pages</span>
+                            </div>
+                            <div class="log-rating">⭐️⭐️⭐️⭐️ (4/5)</div>
+                            <div class="log-notes">
+                                <p>A sci-fi masterpiece with incredible world-building. The political intrigue was fascinating, though some parts felt slow. Looking forward to reading the next book in the series.</p>
+                            </div>
+                        </div>
+                        <div class="log-actions">
+                            <button class="btn-icon">✏️</button>
+                            <button class="btn-icon">🗑️</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reading-stats">
+                    <h2>Reading Statistics</h2>
+                    <div class="stats-cards">
+                        <div class="stat-card">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Books Read This Year</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">4,327</div>
+                            <div class="stat-label">Pages Read</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">4.2</div>
+                            <div class="stat-label">Average Rating</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../script/theme.js"></script>
+    <script src="../script/reading-log.js"></script>
+</body>
+  <div class="sidebar-image">
+        <img src="..\img\Logging Goblin.png" alt="Decorative book image">
+    </div>
+</html>

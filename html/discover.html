@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - Book Goblin</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="logged-in">
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="dashboard.html" class="logo">
+                    <img src="../img/bookgoblin 3.0.jpg" alt="Book Goblin Logo">
+                    Book Goblin
+                </a>
+                <div class="nav-links">
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="library.html">My Library</a>
+                    <a href="reading-log.html">Reading Log</a>
+                    <a href="discover.html" class="active">Discover</a>
+                    <a href="account.html">Account</a>
+                </div>
+                <div class="user-menu">
+                    <div class="user-avatar">
+                        <img src="..\img\account image.png" alt="User Avatar">
+                    </div>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span id="themeIcon">🌙</span> <span id="themeText">Dark Mode</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section id="discover">
+                <div class="page-header">
+                    <h1 class="page-title">Discover Books</h1>
+                    <div class="search-bar">
+                        <input type="text" class="form-control" placeholder="Search for books, authors, or genres...">
+                        <button class="btn">Search</button>
+                    </div>
+                </div>
+
+                <div class="discover-sections">
+                    <div class="discover-section">
+                        <h2>Recommended For You</h2>
+                        <div class="book-grid">
+                            <!-- Recommended books would be dynamically loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="discover-section">
+                        <h2>Popular This Month</h2>
+                        <div class="book-carousel">
+                            <!-- Popular books carousel -->
+                            <div class="book-card">
+                                <div class="book-cover">
+                                    <img src="../img/Harry_Potter_Cover.jpg" alt="Book Cover">
+                                </div>
+                                <div class="book-info">
+                                    <div class="book-title">Harry Potter and the Sorcerer's Stone</div>
+                                    <div class="book-author">J.K. Rowling</div>
+                                    <div class="book-rating">⭐️ 4.8</div>
+                                </div>
+                            </div>
+                            <!-- More book cards... -->
+                        </div>
+                    </div>
+
+                    <div class="discover-section">
+                        <h2>By Genre</h2>
+                        <div class="genre-grid">
+                            <div class="genre-card fantasy">
+                                <h3>Fantasy</h3>
+                                <p>1,245 books</p>
+                            </div>
+                            <div class="genre-card scifi">
+                                <h3>Science Fiction</h3>
+                                <p>872 books</p>
+                            </div>
+                            <div class="genre-card mystery">
+                                <h3>Mystery</h3>
+                                <p>654 books</p>
+                            </div>
+                            <div class="genre-card romance">
+                                <h3>Romance</h3>
+                                <p>1,023 books</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discover-section">
+                        <h2>New Releases</h2>
+                        <div class="book-grid">
+                            <!-- New release books -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../script/theme.js"></script>
+    <script src="../script/discover.js"></script>
+</body>
+  <div class="sidebar-image">
+        <img src="..\img\Searching Goblin.png" alt="Decorative book image">
+    </div>
+</html>

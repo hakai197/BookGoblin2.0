@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Book Goblin</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Register - Book Goblin</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
-                    <img src="img/bookgoblin_3.0.jpg" alt="Book Goblin Logo">
+                    <img src="..\img\bookgoblin 3.0.jpg" alt="Book Goblin Logo">
                     Book Goblin
                 </a>
                 <div class="nav-links">
@@ -30,11 +30,16 @@
         <div class="container">
             <div class="auth-container">
                 <div class="auth-header">
-                    <h1>Welcome Back!</h1>
-                    <p>Log in to access your personal library and reading tracker.</p>
+                    <h1>Create Your Account</h1>
+                    <p>Join Book Goblin to start tracking your reading journey.</p>
                 </div>
                 
                 <form class="auth-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
                     <div class="form-group">
                         <label for="email" class="form-label">Email Address</label>
                         <input type="email" id="email" class="form-control" required>
@@ -44,16 +49,28 @@
                         <label for="password" class="form-label">Password</label>
                         <input type="password" id="password" class="form-control" required>
                         <div class="form-helper">
-                            <a href="forgot-password.html">Forgot password?</a>
+                            Password must be at least 8 characters
                         </div>
                     </div>
                     
                     <div class="form-group">
-                        <button type="submit" class="btn btn-block">Log In</button>
+                        <label for="confirm-password" class="form-label">Confirm Password</label>
+                        <input type="password" id="confirm-password" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group form-check">
+                        <input type="checkbox" id="terms" class="form-check-input" required>
+                        <label for="terms" class="form-check-label">
+                            I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-block">Create Account</button>
                     </div>
                     
                     <div class="auth-footer">
-                        <p>Don't have an account? <a href="register.html">Sign up</a></p>
+                        <p>Already have an account? <a href="login.html">Log in</a></p>
                     </div>
                     
                     <div class="auth-divider">
@@ -76,6 +93,6 @@
         </div>
     </main>
 
-    <script src="js/theme.js"></script>
+    <script src="../script/theme.js"></script>
 </body>
 </html>

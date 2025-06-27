@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Book Goblin</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="logged-in">
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="dashboard.html" class="logo">
+                    <img src="..\img\bookgoblin 3.0.jpg" alt="Book Goblin Logo">
+                    Book Goblin
+                </a>
+                <div class="nav-links">
+                    <a href="dashboard.html" class="active">Dashboard</a>
+                    <a href="library.html">My Library</a>
+                    <a href="reading-log.html">Reading Log</a>
+                    <a href="discover.html">Discover</a>
+                    <a href="account.html">Account</a>
+                </div>
+                <div class="user-menu">
+                    <div class="user-avatar">
+                        <img src="..\img\account image.png" alt="User Avatar">
+                    </div>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span id="themeIcon">🌙</span> <span id="themeText">Dark Mode</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section id="dashboard">
+                <div class="page-header">
+                    <h1 class="page-title">Dashboard</h1>
+                    <button class="btn" id="addBookBtn">Add Book</button>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">127</div>
+                        <div class="stat-label">Total Books</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Currently Reading</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">83</div>
+                        <div class="stat-label">Books Read</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">20</div>
+                        <div class="stat-label">Did Not Finish</div>
+                    </div>
+                </div>
+
+                <h2>Currently Reading</h2>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="img/Name_of_the_Wind_Cover.jpg" alt="Book Cover">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-title">The Name of the Wind</div>
+                            <div class="book-author">Patrick Rothfuss</div>
+                            <div class="book-status status-reading">Reading</div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="img/Dune_Cover.jfif" alt="Book Cover">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-title">Dune</div>
+                            <div class="book-author">Frank Herbert</div>
+                            <div class="book-status status-reading">Reading</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Recently Added</h2>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="img/Harry_Potter_Cover.jpg" alt="Book Cover">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-title">Harry Potter and the Sorcerer's Stone</div>
+                            <div class="book-author">J.K. Rowling</div>
+                            <div class="book-status status-unread">Unread</div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="img/LOTR_Cover.jpg" alt="Book Cover">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-title">The Fellowship of the Ring</div>
+                            <div class="book-author">J.R.R. Tolkien</div>
+                            <div class="book-status status-finished">Finished</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../script/theme.js"></script>
+    <script src="../script/dashboard.js"></script>
+</body>
+<div class="sidebar-image">
+        <img src="..\img\Chilling Goblin.png" alt="Decorative book image">
+    </div>
+</html>

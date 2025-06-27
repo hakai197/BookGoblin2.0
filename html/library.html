@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library - Book Goblin</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="logged-in">
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="dashboard.html" class="logo">
+                    <img src="../img/bookgoblin 3.0.jpg" alt="Book Goblin Logo">
+                    Book Goblin
+                </a>
+                <div class="nav-links">
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="library.html" class="active">My Library</a>
+                    <a href="reading-log.html">Reading Log</a>
+                    <a href="discover.html">Discover</a>
+                    <a href="account.html">Account</a>
+                </div>
+                <div class="user-menu">
+                    <div class="user-avatar">
+                        <img src="..\img\account image.png" alt="User Avatar">
+                    </div>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span id="themeIcon">🌙</span> <span id="themeText">Dark Mode</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section id="library">
+                <div class="page-header">
+                    <h1 class="page-title">My Library</h1>
+                    <div class="library-actions">
+                        <button class="btn" id="addBookBtn">Add Book</button>
+                        <div class="library-filters">
+                            <select class="form-control">
+                                <option>All Books</option>
+                                <option>Currently Reading</option>
+                                <option>Finished</option>
+                                <option>Unread</option>
+                                <option>Did Not Finish</option>
+                            </select>
+                            <input type="text" class="form-control" placeholder="Search books...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="library-shelves">
+                    <div class="shelf-tabs">
+                        <button class="shelf-tab active">All Books (127)</button>
+                        <button class="shelf-tab">Favorites (23)</button>
+                        <button class="shelf-tab">To Read (42)</button>
+                        <button class="shelf-tab">Fantasy (35)</button>
+                        <button class="shelf-tab">Sci-Fi (28)</button>
+                        <button class="shelf-tab">+ New Shelf</button>
+                    </div>
+
+                    <div class="book-grid">
+                        <!-- Book cards would be dynamically loaded here -->
+                        <div class="book-card">
+                            <div class="book-cover">
+                                <img src="../img/Name_of_the_Wind_Cover.jpg" alt="Book Cover">
+                            </div>
+                            <div class="book-info">
+                                <div class="book-title">The Name of the Wind</div>
+                                <div class="book-author">Patrick Rothfuss</div>
+                                <div class="book-status status-reading">Reading</div>
+                            </div>
+                        </div>
+                        <!-- More book cards... -->
+                    </div>
+
+                    <div class="pagination">
+                        <button class="btn btn-outline">Previous</button>
+                        <span>Page 1 of 5</span>
+                        <button class="btn btn-outline">Next</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../script/theme.js"></script>
+    <script src="../script/library.js"></script>
+</body>
+  <div class="sidebar-image">
+        <img src="..\img\Library.png" alt="Decorative book image">
+    </div>
+</html>
