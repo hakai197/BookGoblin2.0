@@ -8,19 +8,21 @@
         <version>3.2.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.techelevator</groupId>
+    <groupId>com.book_goblin2</groupId>
     <artifactId>dao_controller</artifactId>
     <version>1.0</version>
+    <name>BookGoblin2</name>
+    <description>Book tracking application</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <!--suppress UnresolvedMavenProperty -->
-        <java.version>${env.CURRICULUM_JAVA_VERSION}</java.version>
+        <java.version>17</java.version>
         <jjwt.version>0.11.1</jjwt.version>
     </properties>
 
     <dependencies>
+        <!-- Your existing dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jdbc</artifactId>
@@ -77,7 +79,6 @@
         </dependency>
 
         <!-- Swagger API doc -->
-        <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
@@ -86,10 +87,14 @@
     </dependencies>
 
     <build>
+        <outputDirectory>target/classes</outputDirectory>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.book_goblin2.Application</mainClass>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -99,7 +104,15 @@
                     <argLine>-XX:+EnableDynamicAgentLoading</argLine>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
 </project>
