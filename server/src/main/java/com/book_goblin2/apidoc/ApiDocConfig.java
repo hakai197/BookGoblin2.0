@@ -1,4 +1,4 @@
-package com.book_goblin2.api;
+package com.book_goblin2.apidoc;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -47,3 +47,4 @@ public class ApiDocConfig {
                 .addSecurityItem(new SecurityRequirement().addList(securitySchemeName));
     }
 }
+

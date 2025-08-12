@@ -1,7 +1,6 @@
 package com.book_goblin2.model;
 
 import jakarta.validation.constraints.NotEmpty;
-
 /**
  * RegisterUserDto is a class used to hold the registration information for a new user
  * that's sent from the client to the server for the register endpoint.
